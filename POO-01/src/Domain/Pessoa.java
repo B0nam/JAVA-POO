@@ -2,41 +2,41 @@ package Domain;
 
 public class Pessoa
 {
-    private String _Nome;
-    private String _DataNascimento;
-    private int _Idade;
+    private String nome;
+    private String datanascimento;
+    private int idade;
 
     public Pessoa()
     {
     }
 
-    public void SetNome(String nome)
+    public void setNome(String nome)
     {
-        _Nome = nome;
+        this.nome = nome;
     }
 
-    public void SetDataNascimento(String dataNascimento)
+    public void setDataNascimento(String dataNascimento)
     {
-        _DataNascimento = dataNascimento;
+        this.datanascimento = dataNascimento;
     }
 
-    public void SetIdade(int idade)
+    public void setIdade(int idade)
     {
-        _Idade = idade;
+        this.idade = idade;
     }
 
-    public String GetNome()
+    public String getNome()
     {
-        return _Nome;
+        return nome;
     }
 
-    public String GetDataNascimento()
+    public String getDataNascimento()
     {
-        return _DataNascimento;
+        return datanascimento;
     }
 
-    public int GetIdade()
+    public int getIdade()
     {
-        return _Idade;
+        return idade;
     }
 }

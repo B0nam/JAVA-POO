@@ -5,12 +5,12 @@ public class Main {
     {
         Pessoa pessoa = new Pessoa();
 
-        pessoa.SetNome("Bonam");
-        pessoa.SetDataNascimento("28/04/2004");
-        pessoa.SetIdade(19);
+        pessoa.setNome("Bonam");
+        pessoa.setDataNascimento("28/04/2004");
+        pessoa.setIdade(19);
 
-        System.out.println("Nome: " + pessoa.GetNome());
-        System.out.println("Data de nascimento: " + pessoa.GetDataNascimento());
-        System.out.println("Idade: " + pessoa.GetIdade());
+        System.out.println("Nome: " + pessoa.getNome());
+        System.out.println("Data de nascimento: " + pessoa.getDataNascimento());
+        System.out.println("Idade: " + pessoa.getIdade());
     }
 }
