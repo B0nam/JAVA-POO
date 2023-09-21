@@ -8,6 +8,37 @@ import org.junit.jupiter.api.Test;
 public class ContaPessoaTest
 {
     @Test
+    public void DeveCriarContaPessoaCorrente()
+    {
+        ContaPessoa contaPessoa = new ContaPessoa(1, TipoConta.CORRENTE, 0.0, "Joselito", "111.111.111-11");
+        Assertions.assertNotNull(contaPessoa);
+    }
+
+    @Test
+    public void DeveCriarContaPessoaSalario()
+    {
+        ContaPessoa contaPessoa = new ContaPessoa(1, TipoConta.SALARIO, 0.0, "Joselito", "111.111.111-11");
+        Assertions.assertNotNull(contaPessoa);
+    }
+
+    @Test
+    public void DeveCriarContaPessoaPoupanca()
+    {
+        ContaPessoa contaPessoa = new ContaPessoa(1, TipoConta.POUPANCA, 50.0, "Joselito", "111.111.111-11");
+        Assertions.assertNotNull(contaPessoa);
+    }
+
+    @Test
+    public void DeveGerarExceptionQuandoValorEmContaPessoaPoupancaForMenorQueOMinimo()
+    {
+        IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
+        {
+            ContaPessoa contaPessoa = new ContaPessoa(1, TipoConta.POUPANCA, 0.0, "Joselito", "111.111.111-11");
+        });
+        Assertions.assertEquals("O valor em conta é menor do que o valor de abertura permitido.", exception.getMessage());
+    }
+
+    @Test
     public void DeveVerificarDocumentacao()
     {
         ContaPessoa contaPessoa = new ContaPessoa(1, TipoConta.CORRENTE, 0.0, "Joselito", "111.111.111-11");

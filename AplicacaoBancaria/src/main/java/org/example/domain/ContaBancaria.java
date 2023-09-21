@@ -53,6 +53,7 @@ public abstract class ContaBancaria
         this.ldDataDeCriacao = LocalDate.now();
         this.tcConta = tcConta;
         this.dValorEmConta = dValorEmConta;
+        this.rolOperacoes = new ArrayList<>();
         if (dValorEmConta < tcConta.getValorAbertura())
         {
             throw new IllegalArgumentException("O valor em conta é menor do que o valor de abertura permitido.");
